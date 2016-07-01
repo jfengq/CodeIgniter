@@ -17,16 +17,10 @@
                 今天
             </th>
             <th>
-                1天前
+                昨天
             </th>
             <th>
-                2天前
-            </th>
-            <th>
-                3天前
-            </th>
-            <th>
-                4天前
+                前天
             </th>
         </tr>
         </thead>
@@ -47,12 +41,6 @@
                 </td>
                 <td>
                     <?php echo number_format($stock['day2'] / 100000, 0); ?>
-                </td>
-                <td>
-                    <?php echo number_format($stock['day3'] / 100000, 0); ?>
-                </td>
-                <td>
-                    <?php echo number_format($stock['day4'] / 100000, 0); ?>
                 </td>
             </tr>
         <?php endforeach; ?>

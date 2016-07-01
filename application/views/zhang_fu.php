@@ -17,16 +17,10 @@
                 今天
             </th>
             <th>
-                1天前
+                昨天
             </th>
             <th>
-                2天前
-            </th>
-            <th>
-                3天前
-            </th>
-            <th>
-                4天前
+                前天
             </th>
         </tr>
         </thead>
@@ -47,12 +41,6 @@
                 </td>
                 <td>
                     <?php echo $stock['day2']; ?>
-                </td>
-                <td>
-                    <?php echo $stock['day3']; ?>
-                </td>
-                <td>
-                    <?php echo $stock['day4']; ?>
                 </td>
             </tr>
         <?php endforeach; ?>

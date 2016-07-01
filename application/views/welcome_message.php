@@ -18,7 +18,7 @@ defined('BASEPATH') OR exit('No direct script access allowed');
 		<a href="/cheng_jiao">成交量列表</a>
 	</div>
 	<div class="form-group">
-		<a href="/tui_jian?day=2&chengjiao=1&zuigao=30&zhangfu0=8&zhangfu1=7&zhangfu2=13&zhangfu3=17">今日推荐</a>
+		<a href="/tui_jian?day=2&chengjiao0=1&chengjiao1=1.1&zuigao=30&zhangfu0=8&zhangfu1=7&zhangfu2=13&zhangfu3=17">今日推荐</a>
 	</div>
 	<div class="form-group">
 		<span>服务器通信状态：</span>

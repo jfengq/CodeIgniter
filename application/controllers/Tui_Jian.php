@@ -6,7 +6,8 @@ class Tui_Jian extends CI_Controller
     public function index()
     {
         $day = $_GET['day'];
-        $chengjiao = $_GET['chengjiao'];
+        $chengjiao0 = $_GET['chengjiao0'];
+        $chengjiao1 = $_GET['chengjiao1'];
         $zuigao = $_GET['zuigao'];
         $zhangfu0 = $_GET['zhangfu0'];
         $zhangfu1 = $_GET['zhangfu1'];
@@ -46,7 +47,7 @@ class Tui_Jian extends CI_Controller
 
             if ($day == 2) {
                 //最近3个交易日成交量都大于0，且成交量大于前一交易日成交量一定比例
-                if ($cj['day0'] > 0 && $cj['day1'] > 0 && $cj['day0'] >= $cj['day1'] * $chengjiao) {
+                if ($cj['day0'] > 0 && $cj['day1'] > 0 && $cj['day0'] >= $cj['day1'] * $chengjiao0) {
                     
                 } else {
                     continue;
@@ -55,8 +56,8 @@ class Tui_Jian extends CI_Controller
 
             if ($day == 3) {
                 //最近3个交易日成交量都大于0，且成交量大于前一交易日成交量一定比例
-                if ($cj['day0'] > 0 && $cj['day1'] > 0 && $cj['day0'] >= $cj['day1'] * $chengjiao
-                    && $cj['day1'] >= $cj['day2'] * $chengjiao) {
+                if ($cj['day0'] > 0 && $cj['day1'] > 0 && $cj['day0'] >= $cj['day1'] * $chengjiao0
+                    && $cj['day1'] >= $cj['day2'] * $chengjiao1) {
 
                 } else {
                     continue;
@@ -66,7 +67,8 @@ class Tui_Jian extends CI_Controller
         }
         $data['tui_jian'] = $result_arr;
         $data['day'] = $day;
-        $data['chengjiao'] = $chengjiao;
+        $data['chengjiao0'] = $chengjiao0;
+        $data['chengjiao1'] = $chengjiao1;
         $data['zuigao'] = $zuigao;
         $data['zhangfu0'] = $zhangfu0;
         $data['zhangfu1'] = $zhangfu1;
