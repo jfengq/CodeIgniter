@@ -1,5 +1,5 @@
 <?php
-class Zui_Xin_Model extends CI_Model {
+class Zui_xin_model extends CI_Model {
 
     public function __construct()
     {

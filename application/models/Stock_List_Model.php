@@ -1,5 +1,5 @@
 <?php
-class Stock_List_Model extends CI_Model {
+class Stock_list_model extends CI_Model {
 
     public function __construct()
     {

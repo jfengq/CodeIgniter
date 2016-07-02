@@ -1,5 +1,5 @@
 <?php
-class Cheng_Jiao_Model extends CI_Model {
+class Cheng_jiao_model extends CI_Model {
 
     public function __construct()
     {
