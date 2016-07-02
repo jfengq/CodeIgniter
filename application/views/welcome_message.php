@@ -147,7 +147,7 @@ defined('BASEPATH') OR exit('No direct script access allowed');
 
 	setTimeout(function () {
 		window.location.reload();
-	}, 30000);
+	}, 10 * 60000);
 </script>
 </body>
 </html>
