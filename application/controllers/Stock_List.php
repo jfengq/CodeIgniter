@@ -3,7 +3,7 @@ defined('BASEPATH') OR exit('No direct script access allowed');
 
 use \JJG\Request as Request;
 
-class Stock_list extends CI_Controller
+class Stock_List extends CI_Controller
 {
     public function index()
     {

@@ -1,7 +1,7 @@
 <?php
 defined('BASEPATH') OR exit('No direct script access allowed');
 
-class Cheng_jiao extends CI_Controller
+class Cheng_Jiao extends CI_Controller
 {
     public function index()
     {

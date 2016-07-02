@@ -1,7 +1,7 @@
 <?php
 defined('BASEPATH') OR exit('No direct script access allowed');
 
-class Zhang_fu extends CI_Controller
+class Zhang_Fu extends CI_Controller
 {
     public function index()
     {
