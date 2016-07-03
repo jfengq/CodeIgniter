@@ -21,6 +21,10 @@
                     <option value="1.1" <?php if($chengjiao0 == 1.1){ echo 'selected="selected"'; } ?>>1.1</option>
                     <option value="1" <?php if($chengjiao0 == 1){ echo 'selected="selected"'; } ?>>1</option>
                     <option value="0.9" <?php if($chengjiao0 == 0.9){ echo 'selected="selected"'; } ?>>0.9</option>
+                    <option value="0.8" <?php if($chengjiao0 == 0.8){ echo 'selected="selected"'; } ?>>0.8</option>
+                    <option value="0.7" <?php if($chengjiao0 == 0.7){ echo 'selected="selected"'; } ?>>0.7</option>
+                    <option value="0.6" <?php if($chengjiao0 == 0.6){ echo 'selected="selected"'; } ?>>0.6</option>
+                    <option value="0.5" <?php if($chengjiao0 == 0.5){ echo 'selected="selected"'; } ?>>0.5</option>
                 </select>
                 <span class="">成交量1：</span>
                 <select name="chengjiao1" value="<?php echo $chengjiao1 ;?>">
