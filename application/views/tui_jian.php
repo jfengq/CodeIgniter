@@ -14,8 +14,6 @@
                 </select>
                 <span class="">成交量0：</span>
                 <select name="chengjiao0" value="<?php echo $chengjiao0 ;?>">
-                    <option value="1.5" <?php if($chengjiao0 == 1.5){ echo 'selected="selected"'; } ?>>1.5</option>
-                    <option value="1.4" <?php if($chengjiao0 == 1.4){ echo 'selected="selected"'; } ?>>1.4</option>
                     <option value="1.3" <?php if($chengjiao0 == 1.3){ echo 'selected="selected"'; } ?>>1.3</option>
                     <option value="1.2" <?php if($chengjiao0 == 1.2){ echo 'selected="selected"'; } ?>>1.2</option>
                     <option value="1.1" <?php if($chengjiao0 == 1.1){ echo 'selected="selected"'; } ?>>1.1</option>
@@ -24,7 +22,6 @@
                     <option value="0.8" <?php if($chengjiao0 == 0.8){ echo 'selected="selected"'; } ?>>0.8</option>
                     <option value="0.7" <?php if($chengjiao0 == 0.7){ echo 'selected="selected"'; } ?>>0.7</option>
                     <option value="0.6" <?php if($chengjiao0 == 0.6){ echo 'selected="selected"'; } ?>>0.6</option>
-                    <option value="0.5" <?php if($chengjiao0 == 0.5){ echo 'selected="selected"'; } ?>>0.5</option>
                 </select>
                 <span class="">成交量1：</span>
                 <select name="chengjiao1" value="<?php echo $chengjiao1 ;?>">
