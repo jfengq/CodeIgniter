@@ -38,8 +38,8 @@ class Tui_Jian extends CI_Controller
                 continue;
             }
 
-            //股价不能高于
-            if ($st->zuixin > $zuidi) {
+            //股价不能低于
+            if ($st->zuixin < $zuidi) {
                 continue;
             }
 
