@@ -28,7 +28,7 @@ class Tui_Jian extends CI_Controller
             $zf = $this->zhang_fu_model->get_stock_by_code($cj['code']);
 
             //暂时不考虑创业板
-            if (strpos($cj['code'], 'z3') > 1) {
+            if (strpos($cj['code'], 'z3') > 0) {
                 continue;
             }
 
