@@ -68,9 +68,9 @@
             <div class="form-group">
                 <span class="">最低价：</span>
                 <select name="zuidi" value="<?php echo $zuidi ;?>">
-                    <option value="9" <?php if($zuigao == 9){ echo 'selected="selected"'; } ?>>9</option>
-                    <option value="7" <?php if($zuigao == 7){ echo 'selected="selected"'; } ?>>7</option>
-                    <option value="5" <?php if($zuigao == 5){ echo 'selected="selected"'; } ?>>5</option>
+                    <option value="9" <?php if($zuidi == 9){ echo 'selected="selected"'; } ?>>9</option>
+                    <option value="7" <?php if($zuidi == 7){ echo 'selected="selected"'; } ?>>7</option>
+                    <option value="5" <?php if($zuidi == 5){ echo 'selected="selected"'; } ?>>5</option>
                 </select>
                 <span class="">最高价：</span>
                 <select name="zuigao" value="<?php echo $zuigao ;?>">
