@@ -72,6 +72,11 @@ class Tui_Jian extends CI_Controller
                     continue;
                 }
             }
+            
+            //昨天的成交量不能是前天的2.5倍以上
+            if ($cj['day1'] > 2.5 * $cj['day1']) {
+                continue;
+            }
             array_push($result_arr, $cj);
         }
         $data['tui_jian'] = $result_arr;
