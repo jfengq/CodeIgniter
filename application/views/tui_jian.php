@@ -43,14 +43,6 @@
                     <option value="3" <?php if($zhangfu0 == 3){ echo 'selected="selected"'; } ?>>3</option>
                     <option value="2" <?php if($zhangfu0 == 2){ echo 'selected="selected"'; } ?>>2</option>
                 </select>
-                <span class="">前日涨幅：</span>
-                <select name="zhangfu1" value="<?php echo $zhangfu1 ;?>">
-                    <option value="6" <?php if($zhangfu1 == 6){ echo 'selected="selected"'; } ?>>6</option>
-                    <option value="5" <?php if($zhangfu1 == 5){ echo 'selected="selected"'; } ?>>5</option>
-                    <option value="4" <?php if($zhangfu1 == 4){ echo 'selected="selected"'; } ?>>4</option>
-                    <option value="3" <?php if($zhangfu1 == 3){ echo 'selected="selected"'; } ?>>3</option>
-                    <option value="2" <?php if($zhangfu1 == 2){ echo 'selected="selected"'; } ?>>2</option>
-                </select>
                 <span class="">2日涨幅：</span>
                 <select name="zhangfu2" value="<?php echo $zhangfu2 ;?>">
                     <option value="12" <?php if($zhangfu2 == 12){ echo 'selected="selected"'; } ?>>12</option>
@@ -60,8 +52,6 @@
                     <option value="8" <?php if($zhangfu2 == 8){ echo 'selected="selected"'; } ?>>8</option>
                     <option value="7" <?php if($zhangfu2 == 7){ echo 'selected="selected"'; } ?>>7</option>
                 </select>
-            </div>
-            <div class="form-group">
                 <span class="">3日涨幅：</span>
                 <select name="zhangfu3" value="<?php echo $zhangfu3 ;?>">
                     <option value="17" <?php if($zhangfu3 == 17){ echo 'selected="selected"'; } ?>>17</option>
@@ -74,6 +64,8 @@
                     <option value="10" <?php if($zhangfu3 == 10){ echo 'selected="selected"'; } ?>>10</option>
                     <option value="9" <?php if($zhangfu3 == 9){ echo 'selected="selected"'; } ?>>9</option>
                 </select>
+            </div>
+            <div class="form-group">
                 <span class="">最高价：</span>
                 <select name="zuigao" value="<?php echo $zuigao ;?>">
                     <option value="30" <?php if($zuigao == 30){ echo 'selected="selected"'; } ?>>30</option>
