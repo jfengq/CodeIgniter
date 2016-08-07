@@ -11,7 +11,6 @@ class Tui_Jian extends CI_Controller
         $zuigao = $_GET['zuigao'];
         $zuidi = $_GET['zuidi'];
         $zhangfu0 = $_GET['zhangfu0'];
-        $zhangfu1 = $_GET['zhangfu1'];
         $zhangfu2 = $_GET['zhangfu2'];
         $zhangfu3 = $_GET['zhangfu3'];
         $result_arr = array();
@@ -43,7 +42,7 @@ class Tui_Jian extends CI_Controller
                 continue;
             }
 
-            if ($st->zhangfu > 0 && $st->zhangfu < $zhangfu0 && $zf->day1 < $zhangfu1 && ($zf->day0 + $zf->day1) < $zhangfu2
+            if ($st->zhangfu > 0 && $st->zhangfu < $zhangfu0 && ($zf->day0 + $zf->day1) < $zhangfu2
                 && ($zf->day0 + $zf->day1 + $zf->day2) < $zhangfu3 && $st->zuixin > $st->kaipan) {
 
             } else {
@@ -77,7 +76,6 @@ class Tui_Jian extends CI_Controller
         $data['zuigao'] = $zuigao;
         $data['zuidi'] = $zuidi;
         $data['zhangfu0'] = $zhangfu0;
-        $data['zhangfu1'] = $zhangfu1;
         $data['zhangfu2'] = $zhangfu2;
         $data['zhangfu3'] = $zhangfu3;
         $this->load->view('tui_jian', $data);
