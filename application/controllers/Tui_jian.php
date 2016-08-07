@@ -74,7 +74,12 @@ class Tui_Jian extends CI_Controller
             }
             
             //昨天的成交量不能是前天的2.5倍以上
-            if ($cj['day1'] > 2.5 * $cj['day1']) {
+            if ($cj['day1'] > 2.5 * $cj['day2']) {
+                continue;
+            }
+            
+            //今日的成交量不能是昨天的2倍以上
+            if ($cj['day0'] > 2 * $cj['day1']) {
                 continue;
             }
             array_push($result_arr, $cj);
