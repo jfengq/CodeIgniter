@@ -9,6 +9,7 @@ class Tui_Jian extends CI_Controller
         $chengjiao0 = $_GET['chengjiao0'];
         $chengjiao1 = $_GET['chengjiao1'];
         $zuigao = $_GET['zuigao'];
+        $zuidi = $_GET['zuidi'];
         $zhangfu0 = $_GET['zhangfu0'];
         $zhangfu1 = $_GET['zhangfu1'];
         $zhangfu2 = $_GET['zhangfu2'];
@@ -32,12 +33,16 @@ class Tui_Jian extends CI_Controller
                 continue;
             }
 
-            //股价不能高于30
+            //股价不能高于
             if ($st->zuixin > $zuigao) {
                 continue;
             }
 
-            //当日涨幅大于0，且涨幅不超过8，前一交易日涨幅不超过7，连续两日累计涨幅不超过13，连续3个交易日累计涨幅不超过17，且最新价高于开盘价
+            //股价不能高于
+            if ($st->zuixin > $zuidi) {
+                continue;
+            }
+
             if ($st->zhangfu > 0 && $st->zhangfu < $zhangfu0 && $zf->day1 < $zhangfu1 && ($zf->day0 + $zf->day1) < $zhangfu2
                 && ($zf->day0 + $zf->day1 + $zf->day2) < $zhangfu3 && $st->zuixin > $st->kaipan) {
 
@@ -70,6 +75,7 @@ class Tui_Jian extends CI_Controller
         $data['chengjiao0'] = $chengjiao0;
         $data['chengjiao1'] = $chengjiao1;
         $data['zuigao'] = $zuigao;
+        $data['zuidi'] = $zuidi;
         $data['zhangfu0'] = $zhangfu0;
         $data['zhangfu1'] = $zhangfu1;
         $data['zhangfu2'] = $zhangfu2;
