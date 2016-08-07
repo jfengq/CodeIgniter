@@ -31,6 +31,11 @@ class Tui_Jian extends CI_Controller
             if (strpos($cj['code'], 'z3') > 0) {
                 continue;
             }
+            
+            //剔除ST
+            if (strpos($cj['name'], 'ST') > 0) {
+                continue;
+            }
 
             //股价不能高于
             if ($st->zuixin > $zuigao) {
