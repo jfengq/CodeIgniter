@@ -19,7 +19,14 @@ class Cheng_Jiao30 extends CI_Controller
             if (strpos($cj['name'], 'ST') > 0) {
                 continue;
             }
-            array_push($result_arr, $cj);
+            
+            $min = min($cj['day0'], $cj['day1'], $cj['day2'], $cj['day3'], $cj['day4'], $cj['day5'], $cj['day6'], $cj['day7'], $cj['day8'], $cj['day9']
+                , $cj['day10'], $cj['day11'], $cj['day12'], $cj['day13'], $cj['day14'], $cj['day15'], $cj['day16'], $cj['day17'], $cj['day18'], $cj['day19']
+                , $cj['day20'], $cj['day21'], $cj['day22'], $cj['day23'], $cj['day24'], $cj['day25'], $cj['day26'], $cj['day27'], $cj['day28'], $cj['day29']);
+            
+            if ($min == $cj['day0'] && $cj['day0'] != 100000000) {
+                array_push($result_arr, $cj);
+            }
         }
         
         $data['chengjiao30'] = $result_arr;
