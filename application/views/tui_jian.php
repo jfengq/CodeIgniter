@@ -114,11 +114,11 @@
                     <?php echo $stock['name']; ?>
                 </td>
                 <td>
-                    <div><?php echo number_format($stock['day0'] / 100000, 0); ?></div>
+                    <!--<div><?php echo number_format($stock['day0'] / 100000, 0); ?></div>-->
                     <div><?php echo number_format($stock['day0'] / $stock['day1'], 2); ?></div>
                 </td>
                 <td>
-                    <div><?php echo number_format($stock['day1'] / 100000, 0); ?></div>
+                    <!--<div><?php echo number_format($stock['day1'] / 100000, 0); ?></div>-->
                     <div><?php echo number_format($stock['day1'] / $stock['day2'], 2); ?></div>
                 </td>
             </tr>
