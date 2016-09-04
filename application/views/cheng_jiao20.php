@@ -1,6 +1,6 @@
 <?php include 'templates/head.php';?>
 <div class="body">
-    <h1>30日成交推荐列表</h1>
+    <h1>20日成交推荐列表</h1>
     <div class="form-group">
         <a href="/">首页</a>
     </div>
