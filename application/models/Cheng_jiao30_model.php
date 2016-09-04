@@ -15,6 +15,11 @@ class Cheng_jiao_model extends CI_Model {
             $chengjiao = $arr[8];
             $query = $this->db->query('select * from chengjiao30 where code = "' . $code . '"');
             $arr = $query->row_array();
+            
+            if ($chengjiao <= 0) {
+                $chengjiao == 1000000000;
+            }
+            
             $stock = array(
                 'name' => $name,
                 'code' => $code,
