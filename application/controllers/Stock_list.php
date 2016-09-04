@@ -112,11 +112,13 @@ class Stock_List extends CI_Controller
         $this->load->model('zui_xin_model');
         $this->load->model('zhang_fu_model');
         $this->load->model('cheng_jiao_model');
+        $this->load->model('cheng_jiao30_model');
         $this->stock_list_model->set_beifen(1);
         $this->stock_list_model->back_up();
         $this->zui_xin_model->back_up();
         $this->zhang_fu_model->back_up();
         $this->cheng_jiao_model->back_up();
+        $this->cheng_jiao30_model->back_up();
         $this->stock_list_model->set_beifen(0);
 
         echo 0;
@@ -166,6 +168,7 @@ class Stock_List extends CI_Controller
         $this->load->model('zhang_fu_model');
         $this->load->model('zui_xin_model');
         $this->load->model('cheng_jiao_model');
+        $this->load->model('cheng_jiao30_model');
         $this->stock_list_model->set_gengxinshuju(1);
         $stocks = $this->stock_list_model->get_stock_list_all();
         $index = 0;
@@ -180,6 +183,7 @@ class Stock_List extends CI_Controller
             $this->zhang_fu_model->update_stock_list($dataArr, $stockCode);
             $this->zui_xin_model->update_stock_list($dataArr, $stockCode);
             $this->cheng_jiao_model->update_stock_list($dataArr, $stockCode);
+            $this->cheng_jiao30_model->update_stock_list($dataArr, $stockCode);
         }
         $this->stock_list_model->set_gengxinshuju(0);
     }
