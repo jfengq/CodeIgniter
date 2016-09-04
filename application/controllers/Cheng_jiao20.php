@@ -5,7 +5,7 @@ class Cheng_Jiao20 extends CI_Controller
     public function index()
     {
         $this->load->model('cheng_jiao30_model');
-        $chengjiao20_arr = $this->cheng_jiao30_model->get_stock_list_20();
+        $chengjiao20_arr = $this->cheng_jiao30_model->get_stock_list();
         $result_arr = array();
         
         for ($i = 0; $i < count($chengjiao20_arr); $i++) {
