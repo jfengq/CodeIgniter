@@ -6,6 +6,7 @@ class Cheng_Jiao30 extends CI_Controller
     {
         $this->load->model('cheng_jiao30_model');
         $chengjiao30_arr = $this->cheng_jiao30_model->get_stock_list();
+        $result_arr = array();
         
         for ($i = 0; $i < count($chengjiao30_arr); $i++) {
             $cj = $chengjiao30_arr[$i];
