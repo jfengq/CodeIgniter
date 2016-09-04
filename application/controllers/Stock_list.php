@@ -172,7 +172,7 @@ class Stock_List extends CI_Controller
         $this->stock_list_model->set_gengxinshuju(1);
         $stocks = $this->stock_list_model->get_stock_list_all();
         $index = 0;
-        $max = 2;
+        $max = count($stocks);
 
         include 'JJG/Request.php';
 
