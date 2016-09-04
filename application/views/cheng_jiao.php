@@ -34,13 +34,13 @@
                     <?php echo $stock['name']; ?>
                 </td>
                 <td>
-                    <?php echo number_format($stock['day0'] / 100000, 0); ?>
+                    <?php echo number_format($stock['day0'] / 10000, 0); ?>
                 </td>
                 <td>
-                    <?php echo number_format($stock['day1'] / 100000, 0); ?>
+                    <?php echo number_format($stock['day1'] / 10000, 0); ?>
                 </td>
                 <td>
-                    <?php echo number_format($stock['day2'] / 100000, 0); ?>
+                    <?php echo number_format($stock['day2'] / 10000, 0); ?>
                 </td>
             </tr>
         <?php endforeach; ?>
