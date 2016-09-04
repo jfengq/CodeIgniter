@@ -8,7 +8,7 @@ class Cheng_jiao_model extends CI_Model {
 
     public function get_stock_list($pageIndex=0)
     {
-        $query = $this->db->query('SELECT * FROM chengjiao WHERE day0>0 AND day1>0 ORDER BY day0/day1 limit 20 offset ' . $pageIndex * 20 . ' order by ');
+        $query = $this->db->query('SELECT * FROM chengjiao WHERE day0>0 AND day1>0 ORDER BY day0/day1 limit 20 offset ' . $pageIndex * 20);
         return $query->result_array();
     }
 
