@@ -8,7 +8,7 @@ class Zhang_fu_model extends CI_Model {
 
     public function get_stock_list($pageIndex=0)
     {
-        $query = $this->db->query('select * from zhangfu limit 20 offset ' . $pageIndex * 20);
+        $query = $this->db->query('SELECT * FROM zhangfu WHERE day0>0 ORDER BY day0 desc  limit 20 offset ' . $pageIndex * 20);
         return $query->result_array();
     }
 
