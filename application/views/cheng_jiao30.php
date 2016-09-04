@@ -16,7 +16,7 @@
         </tr>
         </thead>
         <tbody>
-        <?php foreach ($chengjiao30_arr as $stock): ?>
+        <?php foreach ($chengjiao30 as $stock): ?>
             <tr>
                 <td>
                     <?php echo substr($stock['code'], 2); ?>
