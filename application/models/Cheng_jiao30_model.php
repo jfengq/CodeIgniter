@@ -1,5 +1,5 @@
 <?php
-class Cheng_jiao_model extends CI_Model {
+class Cheng_jiao30_model extends CI_Model {
     public function __construct()
     {
         $this->load->database();
@@ -24,10 +24,35 @@ class Cheng_jiao_model extends CI_Model {
                 'name' => $name,
                 'code' => $code,
                 'day0' => $chengjiao,
-                'day1' => 0,
-                'day2' => 0,
-                'day3' => 0,
-                'day4' => 0
+                'day1' => 100000000,
+                'day2' => 100000000,
+                'day3' => 100000000,
+                'day4' => 100000000,
+                'day5' => 100000000,
+                'day6' => 100000000,
+                'day7' => 100000000,
+                'day8' => 100000000,
+                'day9' => 100000000,
+                'day10' => 100000000,
+                'day11' => 100000000,
+                'day12' => 100000000,
+                'day13' => 100000000,
+                'day14' => 100000000,
+                'day15' => 100000000,
+                'day16' => 100000000,
+                'day17' => 100000000,
+                'day18' => 100000000,
+                'day19' => 100000000,
+                'day20' => 100000000,
+                'day21' => 100000000,
+                'day22' => 100000000,
+                'day23' => 100000000,
+                'day24' => 100000000,
+                'day25' => 100000000,
+                'day26' => 100000000,
+                'day27' => 100000000,
+                'day28' => 100000000,
+                'day29' => 100000000
             );
             if (count($arr) < 1) {
                 $this->db->insert('chengjiao30', $stock);
