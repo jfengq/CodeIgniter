@@ -8,7 +8,7 @@ class Zui_xin_model extends CI_Model {
 
     public function get_stock_list($pageIndex=0)
     {
-        $query = $this->db->query('select * from zuixin limit 20 offset ' . $pageIndex * 20);
+        $query = $this->db->query('SELECT * FROM zuixin WHERE day0>5 and day0<100 ORDER BY day0 desc limit 20 offset ' . $pageIndex * 20);
         return $query->result_array();
     }
 
