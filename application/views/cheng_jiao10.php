@@ -4,6 +4,7 @@
     <div class="form-group">
         <a href="/">首页</a>
     </div>
+    <div>共<?php echo count($chengjiao10) ?>条数据</div>
     <table class="table table-bordered">
         <thead>
         <tr>
