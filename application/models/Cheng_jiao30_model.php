@@ -6,7 +6,7 @@ class Cheng_jiao30_model extends CI_Model {
     }
     public function get_stock_list()
     {
-        $query = $this->db->query('select * from chengjiao30');
+        $query = $this->db->query('select * from chengjiao30 LEFT JOIN zhangfu ON zhangfu.day0 > 0 WHERE chengjiao30.code = zhangfu.code');
         return $query->result_array();
     }
     public function update_stock_list ($arr, $code) {
