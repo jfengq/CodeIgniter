@@ -29,7 +29,7 @@
                     <?php echo $stock['name']; ?>
                 </td>
                 <td>
-                    <?php echo (float)($stock['day0'] / 10000); ?>
+                    <?php echo (float)($stock['day0'] / 1); ?>
                 </td>
             </tr>
         <?php endforeach; ?>
