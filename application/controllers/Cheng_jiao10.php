@@ -16,7 +16,7 @@ class Cheng_Jiao10 extends CI_Controller
             }
             
             //剔除ST
-            if (strpos($cj['name'], 'ST') == 0) {
+            if (strpos($cj['name'], 'T') > 0) {
                 continue;
             }
             
