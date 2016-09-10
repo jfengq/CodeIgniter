@@ -14,6 +14,9 @@
             <th>
                 名称
             </th>
+            <th>
+                今日成交
+            </th>
         </tr>
         </thead>
         <tbody>
@@ -24,6 +27,9 @@
                 </td>
                 <td>
                     <?php echo $stock['name']; ?>
+                </td>
+                <td>
+                    <?php echo number_format($stock['day0'] / 10000, 2); ?>
                 </td>
             </tr>
         <?php endforeach; ?>
