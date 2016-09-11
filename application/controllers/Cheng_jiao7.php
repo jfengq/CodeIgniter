@@ -29,6 +29,6 @@ class Cheng_Jiao10 extends CI_Controller
         
         $data['chengjiao7'] = $result_arr;
         
-        $this->load->view('cheng_jiao10', $data);
+        $this->load->view('cheng_jiao7', $data);
     }
 }
