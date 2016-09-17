@@ -10,10 +10,6 @@ class Cheng_Jiao30 extends CI_Controller
         
         for ($i = 0; $i < count($chengjiao30_arr); $i++) {
             $cj = $chengjiao30_arr[$i];
-            //暂时不考虑创业板
-            if (strpos($cj['code'], 'z3') > 0) {
-                continue;
-            }
             
             //剔除ST
             if (strpos($cj['name'], 'T') > 0) {

@@ -26,11 +26,6 @@ class Tui_Jian extends CI_Controller
             $cj = $chengjiao_arr[$i];
             $st = $this->stock_list_model->get_stock_by_code($cj['code']);
             $zf = $this->zhang_fu_model->get_stock_by_code($cj['code']);
-
-            //暂时不考虑创业板
-            if (strpos($cj['code'], 'z3') > 0) {
-                continue;
-            }
             
             //剔除ST
             if (strpos($cj['name'], 'T') > 0) {
