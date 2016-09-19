@@ -18,7 +18,7 @@ class Cheng_Jiao10 extends CI_Controller
             
             $min = min($cj['day0'], $cj['day1'], $cj['day2'], $cj['day3'], $cj['day4'], $cj['day5'], $cj['day6'], $cj['day7'], $cj['day8'], $cj['day9']);
             
-            if ($min > 0 && $min*1.1 >= $cj['day0'] && $cj['day0'] != 100000000) {
+            if ($min > 0 && $min >= $cj['day0'] && $cj['day0'] != 100000000) {
                 array_push($result_arr, $cj);
             }
         }
