@@ -50,6 +50,7 @@ class Stock_list_model extends CI_Model {
             );
 
             if (count($arr) < 1) {
+                $stock['new'] = 2;
                 $this->db->insert('stock', $stock);
             } else {
                 $this->db->query('update stock set zuixin=' . $zuixin . ',zuigao=' . $zuigao . ',zuidi=' . $zuidi . ',chengjiao=' . $chengjiao . ',zhangfu=' . $zhangfu . ',kaipan=' . $kaipan . ' where code="' . $code . '"');
