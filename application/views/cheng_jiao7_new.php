@@ -1,10 +1,10 @@
 <?php include 'templates/head.php';?>
 <div class="body">
-    <h1>10日成交推荐列表</h1>
+    <h1>新股7日成交推荐列表</h1>
     <div class="form-group">
         <a href="/">首页</a>
     </div>
-    <div>共<?php echo count($chengjiao10) ?>条数据</div>
+    <div>共<?php echo count($chengjiao7) ?>条数据</div>
     <table class="table table-bordered">
         <thead>
         <tr>
@@ -20,7 +20,7 @@
         </tr>
         </thead>
         <tbody>
-        <?php foreach ($chengjiao10 as $stock): ?>
+        <?php foreach ($chengjiao7 as $stock): ?>
             <tr>
                 <td>
                     <?php echo substr($stock['code'], 2); ?>
