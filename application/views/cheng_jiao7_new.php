@@ -31,10 +31,31 @@
                 <td>
                     <?php echo (float)($stock['day0'] / 1); ?>
                 </td>
+                <td id="<?php echo $stock['code']; ?>">
+                    <button class="remove">移出新股</button>
+                </td>
             </tr>
         <?php endforeach; ?>
         </tbody>
     </table>
     <script>
+        $('.remove').on('click', function () {
+            var $this = $(this);
+            
+            if (confirm("确认要将该股票移出新股列表？")) {
+                $.ajax({
+                    url: '/cheng_jiao7_new/remove_stock?code=' + $this.parent().attr('id'),
+                    cache: false,
+                    timeout: 5 * 60 * 1000,
+                    success: function (data) {
+                        alert('操作成功！');
+                        window.location.reload();
+                    },
+                    error: function () {
+                        alert('操作失败！');
+                    }
+                });
+            }
+        });
     </script>
 </div>
