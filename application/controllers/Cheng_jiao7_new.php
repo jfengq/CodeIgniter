@@ -27,4 +27,12 @@ class Cheng_Jiao7_New extends CI_Controller
         
         $this->load->view('cheng_jiao7_new', $data);
     }
+    
+    public function remove_list()
+    {
+        $code = $_GET['code'];
+        $this->load->model('stock_list_model');
+        
+        $this->stock_list_model->set_new($code, 1);
+    }
 }
