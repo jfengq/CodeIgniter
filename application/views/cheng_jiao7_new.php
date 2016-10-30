@@ -17,6 +17,9 @@
             <th>
                 今日成交
             </th>
+            <th>
+                操作
+            </th>
         </tr>
         </thead>
         <tbody>
