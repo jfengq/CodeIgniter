@@ -95,5 +95,10 @@ class Stock_list_model extends CI_Model {
     {
         $this->db->query('update status set beifen="' . $status . '"');
     }
+    
+    public function set_new($code, $new=1)
+    {
+        $this->db->query('update stock set new="' . $new . '" ' . 'where code="' . $code . '"');
+    }
 }
 ?>
