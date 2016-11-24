@@ -9,6 +9,26 @@ class Cheng_jiao30_model extends CI_Model {
         $query = $this->db->query('select chengjiao30.* from chengjiao30 LEFT JOIN stock ON chengjiao30.code = stock.code WHERE stock.zuixin > 9 and stock.zuixin < 100 and stock.zhangfu > 0 and stock.zhangfu < 2 and chengjiao30.day0 > 0');
         return $query->result_array();
     }
+    public function get_tui_jian2_list()
+    {
+        $query = $this->db->query('SELECT zuixin.code, zuixin.name, zuixin.day0 FROM stock.zuixin AS zuixin'
+  . 'LEFT JOIN stock.chengjiao30 AS chengjiao30 ON chengjiao30.code = zuixin.code'
+  . 'WHERE zuixin.name NOT LIKE '%ST%' AND zuixin.name NOT LIKE '%银行%' AND zuixin.day0 > 5 AND zuixin.day0 < 35 AND'
+          .'((zuixin.day0 - zuixin.day2) / zuixin.day2 < 0.12) AND'
+          .'((zuixin.day1 - zuixin.day3) / zuixin.day3 < 0.12) AND ((zuixin.day2 - zuixin.day4) / zuixin.day4 < 0.12) AND'
+          .'((zuixin.day0 - zuixin.day1) / zuixin.day1 < 0.05) AND'
+          .'((zuixin.day0 - zuixin.day1) / zuixin.day1 > -0.03) AND'
+          .'((zuixin.day1 - zuixin.day2) / zuixin.day2 < 0.07) AND'
+          .'((zuixin.day1 - zuixin.day2) / zuixin.day2 > -0.03) AND'
+          .'((zuixin.day2 - zuixin.day3) / zuixin.day3 < 0.07) AND'
+          .'((zuixin.day2 - zuixin.day3) / zuixin.day3 > -0.03) AND'
+          .'((zuixin.day3 - zuixin.day4) / zuixin.day4 < 0.07) AND'
+          .'((zuixin.day3 - zuixin.day4) / zuixin.day4 > -0.03) AND'
+          .'((chengjiao30.day1 / chengjiao30.day4 > 5 && ((zuixin.day1 - zuixin.day4) / zuixin.day4 < 0.05)) OR'
+           .'(chengjiao30.day2 / chengjiao30.day4 > 5 && ((zuixin.day2 - zuixin.day4) / zuixin.day4 < 0.05)) OR'
+           .'(chengjiao30.day3 / chengjiao30.day4 > 5 && ((zuixin.day3 - zuixin.day4) / zuixin.day4 < 0.05)))');
+        return $query->result_array();
+    }
     public function get_stock_list_new()
     {
         $query = $this->db->query('select chengjiao30.* from chengjiao30 LEFT JOIN stock ON chengjiao30.code = stock.code WHERE stock.new=2 and stock.zuixin > 9 and stock.zuixin < 100 and stock.zhangfu > 0 and stock.zhangfu < 4 and chengjiao30.day0 > 0');

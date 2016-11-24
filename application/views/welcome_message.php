@@ -36,6 +36,9 @@ defined('BASEPATH') OR exit('No direct script access allowed');
 		<a href="/tui_jian?day=3&chengjiao0=0.6&chengjiao1=1&zuidi=7&zuigao=25&zhangfu0=5&zhangfu2=8&zhangfu3=10">今日推荐</a>
 	</div>
 	<div class="form-group">
+		<a href="/tui_jian2">量变推荐</a>
+	</div>
+	<div class="form-group">
 		<span>服务器通信状态：</span>
 		<span id="server_status"></span>
 	</div>
