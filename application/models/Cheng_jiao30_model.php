@@ -13,7 +13,7 @@ class Cheng_jiao30_model extends CI_Model {
     {
         $query = $this->db->query('SELECT zuixin.code, zuixin.name, zuixin.day0 FROM stock.zuixin AS zuixin'
   . 'LEFT JOIN stock.chengjiao30 AS chengjiao30 ON chengjiao30.code = zuixin.code'
-  . 'WHERE zuixin.name NOT LIKE '%ST%' AND zuixin.name NOT LIKE '%银行%' AND zuixin.day0 > 5 AND zuixin.day0 < 35 AND'
+  . "WHERE zuixin.name NOT LIKE '%ST%' AND zuixin.name NOT LIKE '%银行%' AND zuixin.day0 > 5 AND zuixin.day0 < 35 AND"
           .'((zuixin.day0 - zuixin.day2) / zuixin.day2 < 0.12) AND'
           .'((zuixin.day1 - zuixin.day3) / zuixin.day3 < 0.12) AND ((zuixin.day2 - zuixin.day4) / zuixin.day4 < 0.12) AND'
           .'((zuixin.day0 - zuixin.day1) / zuixin.day1 < 0.05) AND'
