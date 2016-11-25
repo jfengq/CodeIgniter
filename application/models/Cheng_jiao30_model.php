@@ -14,19 +14,19 @@ class Cheng_jiao30_model extends CI_Model {
         $query = $this->db->query('SELECT zuixin.code, zuixin.name, zuixin.day0 FROM stock.zuixin AS zuixin'
   . ' LEFT JOIN stock.chengjiao30 AS chengjiao30 ON chengjiao30.code = zuixin.code'
   . " WHERE zuixin.name NOT LIKE '%ST%' AND zuixin.name NOT LIKE '%银行%' AND zuixin.day0 > 5 AND zuixin.day0 < 35 AND"
-          .' ((zuixin.day0 - zuixin.day2) / zuixin.day2 < 0.12) AND'
-          .' ((zuixin.day1 - zuixin.day3) / zuixin.day3 < 0.12) AND ((zuixin.day2 - zuixin.day4) / zuixin.day4 < 0.12) AND'
+          .' ((zuixin.day0 - zuixin.day2) / zuixin.day2 < 0.11) AND'
+          .' ((zuixin.day1 - zuixin.day3) / zuixin.day3 < 0.11) AND ((zuixin.day2 - zuixin.day4) / zuixin.day4 < 0.11) AND'
           .' ((zuixin.day0 - zuixin.day1) / zuixin.day1 < 0.05) AND'
-          .' ((zuixin.day0 - zuixin.day1) / zuixin.day1 > -0.03) AND'
+          .' ((zuixin.day0 - zuixin.day1) / zuixin.day1 > -0.02) AND'
           .' ((zuixin.day1 - zuixin.day2) / zuixin.day2 < 0.07) AND'
-          .' ((zuixin.day1 - zuixin.day2) / zuixin.day2 > -0.03) AND'
+          .' ((zuixin.day1 - zuixin.day2) / zuixin.day2 > -0.02) AND'
           .' ((zuixin.day2 - zuixin.day3) / zuixin.day3 < 0.07) AND'
-          .' ((zuixin.day2 - zuixin.day3) / zuixin.day3 > -0.03) AND'
+          .' ((zuixin.day2 - zuixin.day3) / zuixin.day3 > -0.02) AND'
           .' ((zuixin.day3 - zuixin.day4) / zuixin.day4 < 0.07) AND'
-          .' ((zuixin.day3 - zuixin.day4) / zuixin.day4 > -0.03) AND'
-          .' ((chengjiao30.day1 / chengjiao30.day4 > 2.5 && ((zuixin.day1 - zuixin.day4) / zuixin.day4 < 0.05)) OR'
-           .' (chengjiao30.day2 / chengjiao30.day4 > 2.5 && ((zuixin.day2 - zuixin.day4) / zuixin.day4 < 0.05)) OR'
-           .' (chengjiao30.day3 / chengjiao30.day4 > 2.5 && ((zuixin.day3 - zuixin.day4) / zuixin.day4 < 0.05)))');
+          .' ((zuixin.day3 - zuixin.day4) / zuixin.day4 > -0.02) AND'
+          .' ((chengjiao30.day1 / chengjiao30.day4 > 2.5 && ((zuixin.day1 - zuixin.day4) / zuixin.day4 < 0.03)) OR'
+           .' (chengjiao30.day2 / chengjiao30.day4 > 2.5 && ((zuixin.day2 - zuixin.day4) / zuixin.day4 < 0.03)) OR'
+           .' (chengjiao30.day3 / chengjiao30.day4 > 2.5 && ((zuixin.day3 - zuixin.day4) / zuixin.day4 < 0.03)))');
         return $query->result_array();
     }
     public function get_stock_list_new()
