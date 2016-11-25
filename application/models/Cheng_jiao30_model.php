@@ -24,9 +24,9 @@ class Cheng_jiao30_model extends CI_Model {
           .' ((zuixin.day2 - zuixin.day3) / zuixin.day3 > -0.03) AND'
           .' ((zuixin.day3 - zuixin.day4) / zuixin.day4 < 0.07) AND'
           .' ((zuixin.day3 - zuixin.day4) / zuixin.day4 > -0.03) AND'
-          .' ((chengjiao30.day1 / chengjiao30.day4 > 5 && ((zuixin.day1 - zuixin.day4) / zuixin.day4 < 0.05)) OR'
-           .' (chengjiao30.day2 / chengjiao30.day4 > 5 && ((zuixin.day2 - zuixin.day4) / zuixin.day4 < 0.05)) OR'
-           .' (chengjiao30.day3 / chengjiao30.day4 > 5 && ((zuixin.day3 - zuixin.day4) / zuixin.day4 < 0.05)))');
+          .' ((chengjiao30.day1 / chengjiao30.day4 > 2.5 && ((zuixin.day1 - zuixin.day4) / zuixin.day4 < 0.05)) OR'
+           .' (chengjiao30.day2 / chengjiao30.day4 > 2.5 && ((zuixin.day2 - zuixin.day4) / zuixin.day4 < 0.05)) OR'
+           .' (chengjiao30.day3 / chengjiao30.day4 > 2.5 && ((zuixin.day3 - zuixin.day4) / zuixin.day4 < 0.05)))');
         return $query->result_array();
     }
     public function get_stock_list_new()
