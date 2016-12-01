@@ -21,7 +21,7 @@ class Cheng_Jiao7 extends CI_Controller
                 , $cj['day10'], $cj['day11'], $cj['day12'], $cj['day13'], $cj['day14'], $cj['day15'], $cj['day16'], $cj['day17'], $cj['day18'], $cj['day19']
                 , $cj['day20'], $cj['day21'], $cj['day22'], $cj['day23'], $cj['day24'], $cj['day25'], $cj['day26'], $cj['day27'], $cj['day28'], $cj['day29']);
             
-            if ($min > 0 && $min*1.1 >= $cj['day0'] && $max > 3 * $min && $cj['day0'] != 100000000) {
+            if ($min > 0 && $min*1.1 >= $cj['day0'] && $cj['day0'] != 100000000) {
                 array_push($result_arr, $cj);
             }
         }
