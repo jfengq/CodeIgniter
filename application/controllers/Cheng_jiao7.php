@@ -26,7 +26,7 @@ class Cheng_Jiao7 extends CI_Controller
             }
         }
         
-        $data['chengjiao7'] = $result_arr;
+        $data['chengjiao7'] = $chengjiao7_arr;
         
         $this->load->view('cheng_jiao7', $data);
     }
