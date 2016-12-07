@@ -13,20 +13,10 @@ class Cheng_jiao30_model extends CI_Model {
     {
         $query = $this->db->query('SELECT zuixin.code, zuixin.name, zuixin.day0 FROM stock.zuixin AS zuixin'
   . ' LEFT JOIN stock.chengjiao30 AS chengjiao30 ON chengjiao30.code = zuixin.code'
-  . " WHERE zuixin.name NOT LIKE '%ST%' AND zuixin.name NOT LIKE '%银行%' AND zuixin.day0 > 5 AND zuixin.day0 < 35 AND"
-          .' ((zuixin.day0 - zuixin.day2) / zuixin.day2 < 0.11) AND'
-          .' ((zuixin.day1 - zuixin.day3) / zuixin.day3 < 0.11) AND ((zuixin.day2 - zuixin.day4) / zuixin.day4 < 0.11) AND'
-          .' ((zuixin.day0 - zuixin.day1) / zuixin.day1 < 0.05) AND'
-          .' ((zuixin.day0 - zuixin.day1) / zuixin.day1 > -0.02) AND'
-          .' ((zuixin.day1 - zuixin.day2) / zuixin.day2 < 0.07) AND'
-          .' ((zuixin.day1 - zuixin.day2) / zuixin.day2 > -0.02) AND'
-          .' ((zuixin.day2 - zuixin.day3) / zuixin.day3 < 0.07) AND'
-          .' ((zuixin.day2 - zuixin.day3) / zuixin.day3 > -0.02) AND'
-          .' ((zuixin.day3 - zuixin.day4) / zuixin.day4 < 0.07) AND'
-          .' ((zuixin.day3 - zuixin.day4) / zuixin.day4 > -0.02) AND'
-          .' ((chengjiao30.day1 / chengjiao30.day4 > 3.5 && ((zuixin.day1 - zuixin.day4) / zuixin.day4 < 0.03)) OR'
-           .' (chengjiao30.day2 / chengjiao30.day4 > 3.5 && ((zuixin.day2 - zuixin.day4) / zuixin.day4 < 0.03)) OR'
-           .' (chengjiao30.day3 / chengjiao30.day4 > 3.5 && ((zuixin.day3 - zuixin.day4) / zuixin.day4 < 0.03)))');
+  . " WHERE zuixin.name NOT LIKE '%ST%' AND zuixin.name NOT LIKE '%银行%' AND zuixin.day0 > 8 AND zuixin.day0 < 20 AND"
+          .' ((zuixin.day0 - zuixin.day1) / zuixin.day1 > -0.005) AND ((zuixin.day0 - zuixin.day1) / zuixin.day1 < 0.02)'
+          .' AND (zuixin.day0 - zuixin.day4)/zuixin.day4 < 0.03'
+          .' AND greatest(chengjiao30.day0, chengjiao30.day1, chengjiao30.day2, chengjiao30.day3, chengjiao30.day4, chengjiao30.day5, chengjiao30.day6)/least(chengjiao30.day0, chengjiao30.day1, chengjiao30.day2, chengjiao30.day3, chengjiao30.day4, chengjiao30.day5, chengjiao30.day6) > 5');
         return $query->result_array();
     }
     public function get_stock_list_new()
