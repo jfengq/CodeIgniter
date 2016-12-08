@@ -16,7 +16,8 @@ class Cheng_jiao30_model extends CI_Model {
   . " WHERE zuixin.name NOT LIKE '%ST%' AND zuixin.name NOT LIKE '%银行%' AND zuixin.day0 > 8 AND zuixin.day0 < 20 AND"
           .' ((zuixin.day0 - zuixin.day1) / zuixin.day1 > -0.005) AND ((zuixin.day0 - zuixin.day1) / zuixin.day1 < 0.02)'
           .' AND (zuixin.day0 - zuixin.day4)/zuixin.day4 < 0.03'
-          .' AND greatest(chengjiao30.day0, chengjiao30.day1, chengjiao30.day2, chengjiao30.day3, chengjiao30.day4, chengjiao30.day5, chengjiao30.day6)/least(chengjiao30.day0, chengjiao30.day1, chengjiao30.day2, chengjiao30.day3, chengjiao30.day4, chengjiao30.day5, chengjiao30.day6) > 5');
+          .' AND greatest(chengjiao30.day0, chengjiao30.day1, chengjiao30.day2, chengjiao30.day3, chengjiao30.day4, chengjiao30.day5, chengjiao30.day6)/least(chengjiao30.day0, chengjiao30.day1, chengjiao30.day2, chengjiao30.day3, chengjiao30.day4, chengjiao30.day5, chengjiao30.day6) > 5'
+          .' AND greatest(chengjiao30.day0, chengjiao30.day1, chengjiao30.day2, chengjiao30.day3, chengjiao30.day4, chengjiao30.day5, chengjiao30.day6, chengjiao30.day7, chengjiao30.day8, chengjiao30.day9, chengjiao30.day10, chengjiao30.day11, chengjiao30.day12, chengjiao30.day13, chengjiao30.day14, chengjiao30.day15, chengjiao30.day16, chengjiao30.day17, chengjiao30.day18, chengjiao30.day19, chengjiao30.day20, chengjiao30.day21, chengjiao30.day22, chengjiao30.day23, chengjiao30.day24, chengjiao30.day25, chengjiao30.day26, chengjiao30.day27, chengjiao30.day28, chengjiao30.day29)/greatest(chengjiao30.day0, chengjiao30.day1, chengjiao30.day2, chengjiao30.day3, chengjiao30.day4, chengjiao30.day5, chengjiao30.day6) < 1.3');
         return $query->result_array();
     }
     public function get_stock_list_new()
